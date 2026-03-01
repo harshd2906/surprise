@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Special Birthday Surprise 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+    position: relative;
+    z-index: 5;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #ff2e63;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.videos video {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.emoji-btn {
+    font-size: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.emoji-btn:hover {
+    transform: scale(1.3);
+}
+
+.hidden-message {
+    display: none;
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hidden-message p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Glowing floating bunnies */
+.bunny {
+    position: fixed;
+    bottom: -10px;
+    font-size: 25px;
+    animation: floatUp 5s linear forwards;
+    z-index: 3;
+    text-shadow: 0 0 10px #fff, 0 0 15px #ffb6c1, 0 0 20px #ff69b4;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.1); opacity: 0; }
+}
+
+/* Floating background photos */
+.bg-photo {
+    position: fixed;
+    bottom: -300px;
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.8;
+    animation: floatPhoto 18s linear forwards;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+@keyframes floatPhoto {
+    0% { transform: translateY(0) rotate(0deg) scale(0.9); opacity: 0; }
+    15% { opacity: 0.7; }
+    100% { transform: translateY(-130vh) rotate(360deg) scale(1.1); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday, My Love 💕</h1>
+    <div class="subtitle">You are my favorite person in the whole world 🌸</div>
+
+    <!-- TWO VIDEOS -->
+    <div class="videos">
+        <video autoplay muted loop playsinline>
+            <source src="images/Video_20260228_154723_645.MP4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline>
+            <source src="images/Video_20260228_154257_154.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="subtitle">Click the emoji below for something special 💌</div>
+    <div class="emoji-btn" onclick="showMessage()">🐰</div>
+
+    <div class="hidden-message" id="messageBox">
+        <p>On this beautiful day, I just want you to know how deeply special you are to me.
+           You are not just someone I care about — you are my happiness, my comfort,
+           and the reason behind so many of my smiles.</p>
+        <p>Every moment with you feels magical. Your laugh, your kindness,
+           your beautiful heart — everything about you makes my world brighter.</p>
+        <p>I am so grateful that you were born, because the world gave me you.
+           And I promise to always cherish you, support you, and love you in every way I can. 💞</p>
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("messageBox").style.display = "block";
+}
+
+/* Floating bunnies 🐰 */
+setInterval(() => {
+    const bunny = document.createElement("div");
+    bunny.classList.add("bunny");
+    bunny.innerHTML = "🐰";
+    bunny.style.left = Math.random() * 100 + "vw";
+    bunny.style.fontSize = (Math.random() * 25 + 15) + "px";
+    document.body.appendChild(bunny);
+    setTimeout(() => { bunny.remove(); }, 5000);
+}, 300);
+
+/* Floating background photos */
+const photoList = [
+    "images/IMG_1.jpeg",
+	"images/IMG_2.jpeg",
+	"images/IMG_3.jpeg",
+	"images/IMG_4.jpeg",
+	"images/IMG_5.jpeg",
+	"images/IMG_6.jpeg",
+	"images/IMG_7.jpeg",
+	"images/IMG_8.jpeg",
+	"images/IMG_9.jpeg",
+	"images/IMG_10.jpeg",
+	"images/IMG_11.jpeg",
+	"images/IMG_12.jpeg",
+	"images/IMG_13.jpeg",
+	"images/IMG_14.jpeg",
+	"images/IMG_15.jpeg",
+	"images/IMG_16.jpeg",
+	"images/IMG_17.jpeg",
+	"images/IMG_18.jpeg",
+	"images/IMG_19.jpeg",
+	"images/IMG_20.jpeg",
+	"images/IMG_21.jpeg",
+	"images/IMG_22.jpeg",
+	"images/IMG_23.jpeg",
+	"images/IMG_24.jpeg",
+	"images/IMG_25.jpeg",
+	"images/IMG_26.jpeg",
+	"images/IMG_27.jpeg",
+	"images/IMG_28.jpeg",
+	"images/IMG_29.jpeg",
+	"images/IMG_30.jpeg",
+	"images/IMG_31.jpeg",
+	"images/IMG_32.jpeg",
+	"images/IMG_33.jpeg",
+	"images/IMG_34.jpeg",
+	"images/IMG_35.jpeg",
+	"images/IMG_36.jpeg",
+	"images/IMG_37.jpeg",
+	"images/IMG_38.jpeg",
+	"images/IMG_39.jpeg",
+	"images/IMG_40.jpeg",
+	"images/IMG_41.jpeg",
+	"images/IMG_42.jpeg"
+];
+
+function createFloatingPhoto() {
+    const photo = document.createElement("img");
+    photo.src = photoList[Math.floor(Math.random() * photoList.length)];
+    photo.className = "bg-photo";
+    photo.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(photo);
+    setTimeout(() => { photo.remove(); }, 18000);
+}
+
+setInterval(createFloatingPhoto, 2000);
+</script>
+
+</body>
+</html>
